@@ -13,11 +13,11 @@ defmodule AnalyticTableauxTest do
 
     # Parser.parse(signed_formulas)
 
-    assert Prover.prove(sequent)[:status] == :valid
+    assert Prover.prove(sequent).status == :valid
   end
 
   test "The sequent p, p->r |- q is NOT valid" do
     sequent = "p, p->r |- q"
-    assert Prover.prove(sequent)[:status] == :not_valid
+    assert Prover.prove(sequent).status == :not_valid
   end
 end
