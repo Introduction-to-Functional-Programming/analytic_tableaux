@@ -15,7 +15,12 @@ def deps do
 end
 ```
 
+- Final version: August 26th, 2021
+- Last class: September 2nd, 2021
+
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/analytic_tableaux](https://hexdocs.pm/analytic_tableaux).
+
+
 
