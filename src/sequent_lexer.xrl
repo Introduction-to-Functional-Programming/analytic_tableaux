@@ -10,15 +10,15 @@ TILDE      = \~
 
 Rules.
 
-{ATOM}        : {token, {atom, TokenLine, list_to_atom(TokenChars)}}.
-\(            : {token, {'(',  TokenLine}}.
-\)            : {token, {')',  TokenLine}}.
-,             : {token, {',',  TokenLine}}.
-{TURNSTILE}   : {token, {'|-',  TokenLine}}.
-{PIPE}        : {token, {'|',  TokenLine}}.
-{AMPERSAND}   : {token, {'&',  TokenLine}}.
-{TILDE}       : {token, {'~',  TokenLine}}.
+{ATOM}        : {token, {atom,   TokenLine, list_to_atom(TokenChars)}}.
+\(            : {token, {'(',    TokenLine}}.
+\)            : {token, {')',    TokenLine}}.
+,             : {token, {',',    TokenLine}}.
+{TURNSTILE}   : {token, {'|-',   TokenLine}}.
+{TILDE}       : {token, {unary,  TokenLine, 'not'}}.
+{PIPE}        : {token, {binary, TokenLine, 'or'}}.
+{AMPERSAND}   : {token, {binary, TokenLine, 'and'}}.
+{ARROW}       : {token, {binary, TokenLine, 'implies'}}.
 {WHITESPACE}+ : skip_token.
-{ARROW}       : {token, {'->',  TokenLine}}.
 
 Erlang code.
