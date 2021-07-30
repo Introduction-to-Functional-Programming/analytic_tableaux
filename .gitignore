@@ -24,3 +24,6 @@ analytic_tableaux-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Generated erlang files
+/src/*.erl
