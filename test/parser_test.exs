@@ -70,4 +70,9 @@ defmodule ParserTest do
     assert AnalyticTableaux.Parser.parse("((a & b)) |- (q)") == [{:and, :a, :b}, :q]
   end
 
+  test "top-level complex formulas do not need to be wrapped in parentheses" do
+    assert AnalyticTableaux.Parser.parse("|- q->r") == [{:implies, :q, :r}]
+    assert AnalyticTableaux.Parser.parse("a&~b, b|(c&d),b|- p & q") == [{:and, :a, {:not, :b}}, {:or, :b, {:and, :c, :d}}, :b, {:and, :p, :q}]
+  end
+
 end
