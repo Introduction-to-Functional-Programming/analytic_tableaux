@@ -13,4 +13,10 @@ defmodule ParserTest do
     assert AnalyticTableaux.Parser.parse("p,r |- q") == [:p, :r, :q]
   end
 
+  test "parse fails if no conclusion" do
+    assert_raise MatchError, fn ->
+      AnalyticTableaux.Parser.parse("p,r |-")
+    end
+  end
+
 end
