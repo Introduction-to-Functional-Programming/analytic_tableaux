@@ -1,8 +1,17 @@
 defmodule ParserTest do
   use ExUnit.Case
 
-  test "parses sequent with no premise and atomic conclusion: |- q" do
-    assert AnalyticTableaux.Parser.parse("|- q") == [:q]
+  describe "should parse sequent with no premise and atomic conclusion:" do
+    table = [
+      {"|- q", [:q]},
+      {"|- p", [:p]}
+    ]
+
+    for {sequent, expected_result} <- table do
+      test sequent do
+        assert AnalyticTableaux.Parser.parse(unquote(sequent)) == unquote(expected_result)
+      end
+    end
   end
 
   test "parses sequent with single atomic premise and conclusion: p |- q" do
