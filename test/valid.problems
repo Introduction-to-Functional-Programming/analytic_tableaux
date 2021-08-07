@@ -5,3 +5,5 @@ q|-q
 |-p->p
 |-p->q->p
 p, p->q |- q
+~j|s, s->e |- j->e
+(~b|~h)->m, k&~m |- b
