@@ -7,3 +7,7 @@ q|-q
 p, p->q |- q
 ~j|s, s->e |- j->e
 (~b|~h)->m, k&~m |- b
+~(p&q) |- ~p|~q
+p->q, ~q |- ~p
+p|q, ~p |- q
+p|q, ~q |- p
