@@ -1,15 +1,4 @@
 p|-(p&q)
 p|-(p&(q&s))
 p|-((p&q)&s)
-
-
-assert Prover.prover("p|-(p&q").status == :invalid
-
-v = Prover.prover("p|-(p&q)").countervaluation
-assert v["p"] == true
-assert v["p"] == false
-
-assert Valuator.value(sequent, v) == false
-All premises are true (or there are no premises)
-AND
-The conclusion is false
+p, p->r |- q
