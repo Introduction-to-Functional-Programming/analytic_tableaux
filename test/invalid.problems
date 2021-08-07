@@ -3,4 +3,3 @@ p|-(p&(q&s))
 p|-((p&q)&s)
 p, p->r |- q
 b & k, n -> ~k, k | ~k |- b -> n
-k&~m, (j->~w)=~l, h |- j&h
