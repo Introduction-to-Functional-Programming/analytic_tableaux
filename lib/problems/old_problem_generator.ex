@@ -1,4 +1,4 @@
-defmodule ProblemGenerator do
+defmodule OldProblemGenerator do
   #  https://github.com/adolfont/KEMS/tree/master/kems.problems
 
   def generate(problem, n) do

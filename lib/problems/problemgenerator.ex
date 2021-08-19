@@ -1,4 +1,6 @@
 defmodule ProblemGenerator do
+
+  # Source https://github.com/ploffredi/live_tableaux/blob/main/lib/tableaux/problem_generator.ex
   # Inspiration: https://math.stackexchange.com/questions/1527273/pigeonhole-principle-formula-using-propositonal-logic
 
   def generate(:php, n) do
